@@ -1,7 +1,14 @@
 import React from 'react'
 
-export default function Tasks() {
+import './css/Tasks.css'
+import Task from './Task'
+
+export default function Tasks({tasks}) {
   return (
-    <div>Tasks</div>
+    <div className='tasks-container'>
+      {tasks.map((task) => (
+        <Task key={task.id} task={task} />
+      ))}
+    </div>
   )
 }
