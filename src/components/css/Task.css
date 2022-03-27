@@ -1,15 +1,15 @@
-.task-container{
-    background-color: #444;
-    margin: 8px 0;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    color: #fff;
-}
-
 .task-title{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: #444;
+    color: #eee;
     font-size: 1.1rem;
     font-weight: 400;
+    border-radius: 5px;
+    padding: 0px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    cursor: pointer;
 }

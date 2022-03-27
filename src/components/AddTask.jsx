@@ -12,7 +12,8 @@ export default function AddTask({handleTextAddition}) {
   }
 
   const handleAddTaskClick = () => {
-    handleTextAddition(inputData)
+    {inputData ? handleTextAddition(inputData): alert('Insira o titulo da tarefa!')}
+    setInputData('')
   }
 
   return (
@@ -21,7 +22,8 @@ export default function AddTask({handleTextAddition}) {
           type="text" 
           className='add-task-input' 
           onChange={handleInputOnChange} 
-          value={inputData} 
+          value={inputData}
+          id="add-task"
         />
 
         <Button btnText="Adicionar" onClick={handleAddTaskClick} />
