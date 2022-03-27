@@ -20,3 +20,10 @@ body{
     padding: 30px;
     border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+    .container{
+        width: 95%;
+        padding: 50px 15px;
+    }
+}

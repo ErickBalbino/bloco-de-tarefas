@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import Button from './Button'
 import './css/AddTask.css'
 
-export default function AddTask({handleTextAddition}) {
+export default function AddTask({handleTaskAddition}) {
 
   const[inputData, setInputData] = useState('')
 
@@ -12,7 +12,7 @@ export default function AddTask({handleTextAddition}) {
   }
 
   const handleAddTaskClick = () => {
-    {inputData ? handleTextAddition(inputData): alert('Insira o titulo da tarefa!')}
+    {inputData ? handleTaskAddition(inputData): alert('Insira o titulo da tarefa!')}
     setInputData('')
   }
 

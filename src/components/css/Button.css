@@ -9,4 +9,9 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.2s ease-in-out background-color;
+}
+
+.button:hover{
+    background-color: #69d101;
 }

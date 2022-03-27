@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 import './App.css'
 import Tasks from './components/Tasks'
 import AddTask from './components/AddTask'
+import Header from './components/Header'
 
 export default function App() {
    
@@ -20,13 +21,18 @@ export default function App() {
     }
   ])
 
-  const handleTextAddition = (taskTitle) => {
+  const handleTaskAddition = (taskTitle) => {
     const newTasks = [ ...tasks, {
       id: uuidv4(),
       title: taskTitle,
       completed: false
     }]
 
+    setTasks(newTasks)
+  }
+
+  const handleTextDeletion = (taskId) => {
+    const newTasks = tasks.filter(task => task.id !== taskId)
     setTasks(newTasks)
   }
 
@@ -49,9 +55,11 @@ export default function App() {
 
   return (
     <div className='container'>
-      <AddTask handleTextAddition={handleTextAddition} />
+      <Header />
+
+      <AddTask handleTaskAddition={handleTaskAddition} />
       
-      <Tasks tasks={tasks} handleTaskClick={handleTaskClick} />
+      <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTextDeletion={handleTextDeletion} />
     </div>
   )
 }
