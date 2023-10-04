@@ -1,14 +1,20 @@
-import React from 'react'
+import React from "react";
 
-import './css/Tasks.css'
-import Task from './Task'
+import Task from "./Task";
+
+import * as styles from "./css/Tasks.css";
 
 export default function Tasks({ tasks, handleTaskClick, handleTextDeletion }) {
   return (
-    <div className='tasks-container'>
+    <styles.Container>
       {tasks.map((task) => (
-        <Task key={task.id} task={task} handleTaskClick={handleTaskClick} handleTextDeletion={handleTextDeletion} />
+        <Task
+          key={task.id}
+          task={task}
+          handleTaskClick={handleTaskClick}
+          handleTextDeletion={handleTextDeletion}
+        />
       ))}
-    </div>
-  )
+    </styles.Container>
+  );
 }

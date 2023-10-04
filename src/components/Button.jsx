@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
-import './css/Button.css'
+import * as styles from "./css/Button.css";
 
-export default function Button({btnText, onClick}) {
+export default function Button({ btnText, onClick }) {
   return (
     <div>
-        <button className="button" onClick={onClick}>
-            {btnText}
-        </button>
+      <styles.Container onClick={onClick}>{btnText}</styles.Container>
     </div>
-  )
+  );
 }
